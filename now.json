@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [ {"use": "@now",
+  "builds": [ {"use": "@now/next",
     "src": "package.json"
     }]
 }
