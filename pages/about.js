@@ -1,11 +1,10 @@
 import Layout from "../components/MyLayout";
 import Head from "next/head";
 import Index from "./index"
-import { FAQCard } from "../components/FAQCard";
 
 
 const About = () => (
-  <Layout noContainer={<FAQCard />}>
+  <Layout >
     <Head>
       <title>About</title>
     </Head>
