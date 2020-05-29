@@ -154,22 +154,22 @@ const Index = (props) => {
         </div>
       </div>
 
-      {/* <h1>Users List</h1>
+      <h1>Users List</h1>
       <ul>
         {users && users.map((user) => <User key={user.id} user={user} />)}
-      </ul> */}
+      </ul>
     </Layout>
   );
 };
 
-// Index.getInitialProps = async (ctx) => {
-//   const { users } = await ctx.store.dispatch(getUsers());
-//   return { users };
-// };
+Index.getInitialProps = async (ctx) => {
+  const { users } = await ctx.store.dispatch(getUsers());
+  return { users };
+};
 
-// const mapStateToProps = (state) => ({
-//   users: state.usersReducer.users,
-// });
+const mapStateToProps = (state) => ({
+  users: state.usersReducer.users,
+});
 
 const style = {
   subscriptionheader: {
@@ -193,4 +193,4 @@ const style = {
     marginTop: 115,
   },
 };
-export default Index;
+export default connect(mapStateToProps)(Index);
