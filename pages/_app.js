@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Assets/css/style.scss"
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    const pageProps = Component.getInitialProps
-      ? await Component.getInitialProps(ctx)
+  static async getStaticProps({ Component, ctx }) {
+    const pageProps = Component.getStaticProps
+      ? await Component.getStaticProps(ctx)
       : {};
 
     return { pageProps };
