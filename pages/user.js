@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import Layout from "../components/MyLayout";
 
-import { getUser } from "../store/actions/usersActions";
+import { getUser, getData } from "../store/actions/usersActions";
 
 class User extends React.PureComponent {
   render() {
@@ -14,8 +14,42 @@ class User extends React.PureComponent {
         <Head>
           <title>{user.name}</title>
         </Head>
-
+         
         <h1>{user.name}</h1>
+        <h1>{user.name}</h1>
+        <h1>{user.name}</h1>
+        <h1>{user.name}</h1>
+
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
       </Layout>
     );
   }
@@ -24,12 +58,13 @@ class User extends React.PureComponent {
 User.getInitialProps = async ctx => {
   const { id } = ctx.query;
   const { user } = await ctx.store.dispatch(getUser(id));
-
-  return { user };
+  const { data } = await ctx.store.dispatch(getData());
+  return { user, data };
 };
 
 const mapStateToProps = state => ({
-  user: state.usersReducer.user
+  user: state.usersReducer.user,
+  data: state.usersReducer.data
 });
 
 export default connect(mapStateToProps)(User);

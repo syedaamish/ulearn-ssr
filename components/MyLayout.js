@@ -1,21 +1,22 @@
 import Head from "next/head";
-
+import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: "1px solid #ddd"
+  marginTop: 60,
 };
 
-const Layout = props => (
+const Layout = (props) => (
   <div style={layoutStyle}>
     <Head>
-      <title>Next.js App with Redux</title>
+      <title>Home</title>
     </Head>
 
     <Header />
-    {props.children}
+    <div className="container">{props.children}</div>
+    <div>{props.noContainer}</div>
+    <Footer />
   </div>
 );
 

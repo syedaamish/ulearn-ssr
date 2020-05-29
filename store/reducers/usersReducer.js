@@ -7,7 +7,9 @@ export default (state = {}, action) => {
 
     case actions.GET_USER:
       return { ...state, user: action.user };
-
+      case actions.GET_DATA:
+        return { ...state, data: action.user };
+  
     default:
       return state;
   }

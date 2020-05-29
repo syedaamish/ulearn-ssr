@@ -11,6 +11,8 @@ export default class extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet"/>
+
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         </Head>
         <body>

@@ -11,3 +11,8 @@ export const getUser = id => async dispatch => {
   const user = await axios.get(`/users/${id}`);
   return dispatch({ type: actions.GET_USER, user: user.data });
 };
+
+export const getData = id => async dispatch => {
+  const user = "Testing";
+  return dispatch({ type: actions.GET_DATA, user: user });
+};
