@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import plus from "../Assets/Icons/Plus.svg"
+import plus from "../Assets/Icons/plus.svg"
 
 export const FAQCard = () => {
     return (
