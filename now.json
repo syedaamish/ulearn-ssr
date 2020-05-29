@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [ {"use": "@now/static-build",
+  "builds": [ {"use": "@now",
     "src": "package.json"
     }]
 }
