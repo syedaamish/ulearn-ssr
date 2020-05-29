@@ -154,10 +154,10 @@ const Index = (props) => {
         </div>
       </div>
 
-      {/* <h1>Users List</h1>
+      <h1>Users List</h1>
       <ul>
         {users && users.map((user) => <User key={user.id} user={user} />)}
-      </ul> */}
+      </ul>
     </Layout>
   );
 };
