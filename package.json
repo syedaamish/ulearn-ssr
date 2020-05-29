@@ -11,10 +11,8 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [
-    "next.js",
-    "react",
-    "redux",
-    "ssr"
+    "ulearn"
+   
   ],
   "author": "Try Developers",
   "license": "MIT",

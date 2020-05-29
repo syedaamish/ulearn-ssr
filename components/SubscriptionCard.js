@@ -16,8 +16,8 @@ export default function SubscriptionCard(props) {
         className="d-flex flex-column"
         style={{ height: 420, padding: 32 }}
       >
-        {props.listData.map((listText) => (
-          <div className="d-flex flex-row justify-content-end" >
+        {props.listData.map((listText,key) => (
+          <div key={key} className="d-flex flex-row justify-content-end" >
             {" "}
             <span style={{...style.listText,width:"65%"}}>{listText}</span>
             <img src={checkmark} alt="icon" style={{ marginLeft: 26 }} />
