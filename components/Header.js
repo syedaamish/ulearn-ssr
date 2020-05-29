@@ -30,10 +30,9 @@ class Header extends Component {
 
                   <img src={phone} alt="icon"/>
                 </Nav.Link>
-                <Nav.Link href="/home" ><span className="navLink">؟أﺪﺑا نﻮﻠﺷ</span></Nav.Link>
                 <Nav.Link href="/" ><span className="navLink">؟أﺪﺑا نﻮﻠﺷ</span></Nav.Link>
                 <Nav.Link href="/about"><span className="navLink">؟أﺪﺑا نﻮﻠﺷ</span></Nav.Link>
-                <Nav.Link><Button className="nav-btn">ﻢﻠﻌﺘﻟا أﺪﺑا</Button></Nav.Link>
+                <Nav.Link href="/home"><a><Button className="nav-btn">ﻢﻠﻌﺘﻟا أﺪﺑا</Button></a></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>
