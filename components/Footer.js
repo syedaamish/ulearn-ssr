@@ -7,7 +7,7 @@ import moment from "moment";
 
 export default function Footer() {
   return (
-    <Row style={{ backgroundColor: "#191C1F", height: 224 }}>
+    <Row style={{ backgroundColor: "#191C1F", minHeight: 224,alignItems:"center" }}>
       <span
         style={{ color: "#6B6C7F" }}
         className="col-md-4 h-100 w-100 d-flex justify-content-center align-items-center"

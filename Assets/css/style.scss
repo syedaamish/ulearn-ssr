@@ -3,9 +3,9 @@
 // }
 body {
   font-family: Cairo;
-  // direction: rtl;
-  overflow-x: hidden;
+  
 }
+html, body { overflow-x: hidden; }
 .navbar-light .navbar-nav .nav-link {
   font-style: normal;
   font-weight: bold;
@@ -175,4 +175,13 @@ border-radius: 8px;
     display: flex;
     justify-content: center;
   }
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1000px;
+}
+}
+
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1200px;
+}
 }

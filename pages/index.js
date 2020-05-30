@@ -193,4 +193,4 @@ const style = {
     marginTop: 115,
   },
 };
-export default Index;
+export default (Index);
