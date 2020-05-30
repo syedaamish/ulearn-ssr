@@ -17,6 +17,7 @@ import SubscriptionCard from "../components/SubscriptionCard";
 import DescriptionSection from "../components/DescriptionSection";
 import { ReviewCard } from "../components/ReviewCard";
 import { FAQCard } from "../components/FAQCard";
+import { Banner } from "../components/Banner";
 
 const User = ({ user }) => (
   <li>
@@ -30,7 +31,7 @@ const Index = (props) => {
   const { users } = props;
   return (
     <Layout noContainer={<FAQCard />}>
-      <div>{/* <img src={banner} alt="img" /> */}</div>
+      <div><Banner/></div>
       <ScrollableSection />
       <Row style={{ marginTop: 110 }}>
         <Col md={4}>
@@ -69,6 +70,7 @@ const Index = (props) => {
           <SubscriptionCard
             title="ﺮﻬﺷ كاﺮﺘﺷا"
             desc="ﺔﻐﻠﻟا ﺮﻳﻮﻄﺗ دوا"
+            tag
             listData={[
               "ﺔﻐﻠﻟا ىﻮﺘﺴﻣ ﺪﻳﺪﺤﺗ رﺎﺒﺘﺧا ",
               "ﺪﻤﺘﻋُم سرﺪﻣ ﻊﻣ ةﺮﺷﺎﺒﻣ سورد",
@@ -84,6 +86,7 @@ const Index = (props) => {
           <SubscriptionCard
             title="تﺎﻗﺎﺒﻟا كاﺮﺘﺷا"
             desc="ﺔﻐﻠﻟا نﺎﻘﺗا دوا"
+            btn2={true}
             listData={[
               "ﺔﻐﻠﻟا ىﻮﺘﺴﻣ ﺪﻳﺪﺤﺗ رﺎﺒﺘﺧا ",
               "ﺪﻤﺘﻋُم سرﺪﻣ ﻊﻣ ةﺮﺷﺎﺒﻣ سورد",
@@ -154,22 +157,22 @@ const Index = (props) => {
         </div>
       </div>
 
-      {/* <h1>Users List</h1>
+      <h1>Users List</h1>
       <ul>
         {users && users.map((user) => <User key={user.id} user={user} />)}
-      </ul> */}
+      </ul>
     </Layout>
   );
 };
 
-// Index.getInitialProps = async (ctx) => {
-//   const { users } = await ctx.store.dispatch(getUsers());
-//   return { users };
-// };
+Index.getInitialProps = async (ctx) => {
+  const { users } = await ctx.store.dispatch(getUsers());
+  return { users };
+};
 
-// const mapStateToProps = (state) => ({
-//   users: state.usersReducer.users,
-// });
+const mapStateToProps = (state) => ({
+  users: state.usersReducer.users,
+});
 
 const style = {
   subscriptionheader: {
@@ -193,4 +196,4 @@ const style = {
     marginTop: 115,
   },
 };
-export default (Index);
+export default connect(mapStateToProps)(Index);
