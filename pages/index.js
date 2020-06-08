@@ -1,12 +1,10 @@
-import Link from "next/link";
-import { connect } from "react-redux";
-import banner from "../Assets/Images/placeholder.jpg";
+
 import Layout from "../components/MyLayout";
 import DescIcon from "../Assets/Icons/DescSectionIcon1.svg";
 import DescIcon1 from "../Assets/Icons/DescSectionIcon2.svg";
 import DescIcon2 from "../Assets/Icons/DescSectionIcon3.svg";
 import DescIcon3 from "../Assets/Icons/DescSectionIcon4.svg";
-import { getUsers, getData } from "../store/actions/usersActions";
+// import { getUsers, getData } from "../store/actions/usersActions";
 import ScrollableSection from "../components/ScrollableSection";
 import CardWithIcon from "../components/CardWithIcon";
 import { Row, Col } from "react-bootstrap";
