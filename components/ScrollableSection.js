@@ -10,11 +10,10 @@ export default function ScrollableSection() {
     <div>
       <div
         className="d-flex justify-content-center w-100"
-        style={{ padding: "40px 0 60px 0" }}
-      >
+        style={{ padding: "40px 0 60px 0" }}>
         <span className="scroll-header">ﻢﻠﻌﺗا نا ﺪﻳرا</span>
       </div>
-      <div style={{ margin: "0 -40px 0 -80px  " }}>
+      <div style={{margin: "0 -18px 0 -85px",}}>
         <div
           className="d-flex justify-content-between w-100 row image-holder-container"
           style={{ padding: "0  0 0 100px" }}
@@ -26,7 +25,7 @@ export default function ScrollableSection() {
               style={{ padding: 25 }}
             >
               <div className="d-flex justify-content-end">
-                <img src={ilts} alt="icon" />
+                <img src={ilts} alt="icon" className="scrollable-card-icon"/>
               </div>
               <span style={{ ...style.text, textAlign: "end" }}>ستليآلا</span>
             </div>
@@ -37,7 +36,7 @@ export default function ScrollableSection() {
               style={{ padding: 25 }}
             >
               <div className="d-flex justify-content-end">
-                <img src={flag1} alt="icon" />
+                <img src={flag1} alt="icon"  className="scrollable-card-icon"/>
               </div>
               <span style={{ ...style.text, textAlign: "end" }}>ستليآلا</span>
             </div>
@@ -48,7 +47,7 @@ export default function ScrollableSection() {
               style={{ padding: 25 }}
             >
               <div className="d-flex justify-content-end">
-                <img src={spainFlag} alt="icon" />
+                <img src={spainFlag} alt="icon"  className="scrollable-card-icon"/>
               </div>
               <span style={{ ...style.text, textAlign: "end" }}>ستليآلا</span>
             </div>
@@ -59,7 +58,7 @@ export default function ScrollableSection() {
               style={{ padding: 25 }}
             >
               <div className="d-flex justify-content-end">
-                <img src={franceFlag} alt="icon" />
+                <img src={franceFlag} alt="icon" className="scrollable-card-icon"/>
               </div>
               <span style={{ ...style.text, textAlign: "end" }}>ستليآلا</span>
             </div>
@@ -70,7 +69,7 @@ export default function ScrollableSection() {
               style={{ padding: 25 }}
             >
               <div className="d-flex justify-content-end">
-                <img src={flagUk} alt="icon" />
+                <img src={flagUk} alt="icon" className="scrollable-card-icon"/>
               </div>
               <span style={{ ...style.text, textAlign: "end" }}>ستليآلا</span>
             </div>

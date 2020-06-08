@@ -2,26 +2,32 @@
 //   direction: rtl;
 // }
 body {
+  overflow-x: hidden; 
   font-family: Cairo;
 }
-html,
-body {
-  overflow-x: hidden;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
-
+.navbar {
+  background-color: #fff !important;
+}
 .navbar-light .navbar-nav .nav-link {
   font-style: normal;
   font-weight: bold;
   margin-left: 20px;
   font-size: 14px;
-  line-height: 28px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
   color: #191c1f;
 }
-.navbar {
-  background-color: #fff !important;
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 0;
 }
 .phone-no {
   font-style: normal;
@@ -94,7 +100,9 @@ body {
   box-shadow: 0px 4px 12px rgba(15, 35, 41, 0.12);
   border-radius: 8px;
 }
-
+.res-phone-icon{
+  display: none;
+}
 .subscription-card {
   background: #ffffff;
   width: 384px;
@@ -117,6 +125,7 @@ body {
   color: #6b6c7f;
 }
 .subscription-card-header {
+  margin: 0 40px;
   border-bottom: 1px solid #e8e9f5;
 }
 // .subscription-card:hover .subscription-card-header {
@@ -129,22 +138,40 @@ body {
 //   box-shadow: 0px 4px 12px rgba(15, 35, 41, 0.08);
 //   border-radius: 8px;
 // }
+
+.scrollable-card-icon {
+  width: 48px;
+  height: 48px;
+}
 .res-flex-end {
   display: flex;
   justify-content: flex-end;
+}
+.res-section-center {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 .res-flex-start {
   display: flex;
   justify-content: flex-start;
 }
+.banner-padding-top {
+  text-align: right;
+  padding-top: 65px;
+}
 .review-card {
-  width: 384px !important;
+  width: 384px;
   height: 254px;
   padding: 35px;
   margin-right: 20px;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(15, 35, 41, 0.08);
   border-radius: 8px;
+}
+.review-card-icon {
+  width: 52px;
+  height: 52px;
 }
 .review-container {
   overflow-x: scroll;
@@ -162,9 +189,9 @@ body {
 }
 .faq-card {
   background-color: rgba(232, 233, 245, 0.25);
-
   padding: 116px 0 116px 0;
 }
+
 .tag {
   width: 124.5px;
   height: 24.92px;
@@ -193,18 +220,88 @@ body {
   border-left: 25px solid #fd3e60;
 }
 @media (max-width: 992px) {
+  .navbar-light .navbar-toggler:focus{
+    outline: none !important;
+    
+  }
+  .banner-padding-top {
+    padding-top: 25px;
+  }
   .res-flex-end {
     display: flex;
     justify-content: center;
+  }
+  .res-padding-bottom {
+    padding-bottom: 50px;
+  }
+  .restext-align-center {
+    text-align: center;
+    align-content: center;
+    width: 100%;
+  }
+  .res-section-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .res-banner-reverse {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .faq-card {
     background-color: rgba(232, 233, 245, 0.25);
     margin-right: 0vh;
     margin-left: 0vh;
   }
+  .res-phone-icon{
+    display: block;
+  }
+  .scrollable-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .review-card {
+    width: 286px;
+    height: auto;
+  }
+  .review-card-icon {
+    width: 32px;
+    height: 32px;
+  }
   .res-flex-start {
     display: flex;
     justify-content: center;
+  }
+  .image-holder {
+    height: 154px;
+    min-width: 154px;
+  }
+  .tag {
+    width: 105.5px;
+    height: 24.92px;
+    position: relative;
+    top: 0px;
+    right: 126px;
+    background: #fd3e60;
+    transform: matrix(-0.71, 0.7, 0.71, 0.71, 0, 0);
+  }
+  .tag:after {
+    top: 0px;
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    right: 106px;
+    border-top: 25px solid transparent;
+    border-right: 25px solid #fd3e60;
+  }
+  .navbar-nav {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .height-100vh {
+    height: 100vh;
   }
   .container,
   .container-lg,
@@ -212,6 +309,20 @@ body {
   .container-sm,
   .container-xl {
     max-width: 1000px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e8e9f5;
+    text-transform: capitalize;
+    color: #191c1f;
+    padding: 16px 0;
   }
 }
 

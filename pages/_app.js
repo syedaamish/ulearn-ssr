@@ -3,7 +3,7 @@ import App, { Container } from "next/app";
 import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import { makeStore } from "../store";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Assets/css/style.scss"
 
 class MyApp extends App {

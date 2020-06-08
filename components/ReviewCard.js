@@ -8,8 +8,8 @@ export const ReviewCard = () => {
     <div>
         <div className="review-card">
       <div className="d-flex justify-content-between" style={{marginBottom:26,}}>
-        <img src={quote} alt="icon" />
-        <div className="d-flex flex-row" >
+        <img src={quote} alt="icon" className="review-card-icon"/>
+        <div className="d-flex flex-row">
           <div className="d-flex flex-column justify-content-center" style={{marginRight:20, textAlign:"right"}}>
             <span style={style.name}>Full Name</span>
             <span style={style.student}>Student</span>

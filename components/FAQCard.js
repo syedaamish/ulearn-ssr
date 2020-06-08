@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import plus from "../Assets/Icons/plus.svg";
 import faqImage from "../Assets/Images/faq_placeholder.png";
-import phone from "../Assets/Icons/phone.svg";
+import Phone from "../Assets/Icons/phone";
 
 export const FAQCard = () => {
   return (
@@ -12,7 +12,7 @@ export const FAQCard = () => {
           <span>أسئلة مكررة</span>
         </div>
         <Row>
-          <Col md={6}>
+          <Col md={6} style={{padding: '0 24px'}} className="res-padding-bottom">
             <div
               className="d-flex flex-row justify-content-between"
               style={{
@@ -21,7 +21,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -31,7 +31,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}> ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -41,7 +41,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -51,17 +51,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
-            </div>
-            <div
-              className="d-flex flex-row justify-content-between"
-              style={{
-                borderBottom: "1px solid #E3E9EF",
-                padding: "0 0 24px 0",
-              }}
-            >
-              <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -71,7 +61,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -81,7 +71,7 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
@@ -91,35 +81,55 @@ export const FAQCard = () => {
               }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
             </div>
             <div
               className="d-flex flex-row justify-content-between"
-              style={{ padding: "24px 0 24px 0" }}
+              style={{
+                borderBottom: "1px solid #E3E9EF",
+                padding: "24px 0 24px 0",
+              }}
             >
               <img src={plus} alt="icon" />
-              <span>ما البرامج والأجهزة التي أحتاجها؟</span>
+              <span style={style.title}>ما البرامج والأجهزة التي أحتاجها؟</span>
+            </div>
+            <div className="res-padding-bottom">
+            <div
+              className="d-flex flex-row justify-content-between"
+              style={{
+                borderBottom: "1px solid #E3E9EF",
+                padding: "24px 0 24px 0",
+              }}
+            >
+              <img src={plus} alt="icon" />
+              <span style={style.title}>التي أحتاجها؟</span>
+            </div>
             </div>
           </Col>
           <Col md={6}>
             <div className="d-flex justify-content-end flex-column">
-              <div className="d-flex justify-content-end">
+              <div className="d-flex justify-content-end" style={{paddingBottom:18}}>
                 <span style={{ ...style.text, color: "#35A7FF", fontSize: 17 }}>
                   شاهد عينة من الفصل
                 </span>
               </div>
               <div className="d-flex justify-content-end">
-                <img src={faqImage} alt="img" width={504} height={550} />
+                <img src={faqImage} alt="img" width={'100%'} height={"100%"} />
               </div>
-              <div className="d-flex justify-content-between">
+              <div
+                className="d-flex justify-content-between"
+                style={{
+                  borderBottom: "1px solid #E3E9EF",paddingBottom:27,paddingTop:40
+                }}
+              >
                 <div className="d-flex flex-row align-items-end">
-                  <img width={20} height={20} src={phone} alt="icon" />
+                  <Phone color="#FD3E60"/>
                   <span
                     style={{
                       ...style.style,
                       color: "#FD3E60",
                       fontSize: 17,
-                      marginLeft:10,
+                      marginLeft: 10,
                       fontWeight: "normal",
                     }}
                   >
@@ -155,6 +165,13 @@ const style = {
     color: "#191C1F",
     marginBottom: 60,
     //   marginTop: 115,
+  },
+  title: {
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: 17,
+    lineHeight: 1.5888,
+    color: "#222528",
   },
   text: {
     fontStyle: "normal",

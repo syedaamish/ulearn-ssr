@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CardWithIcon(props) {
   return (
-    <div className="d-flex flex-column">
+    <div className={ props.first || props.second ? "res-padding-bottom d-flex flex-column" : "d-flex flex-column"}>
       <img src={props.icon} alt="icon" />
       <div className="d-flex align-items-center flex-column">
         <span style={style.text}>{props.text}</span>

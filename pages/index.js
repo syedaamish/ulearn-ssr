@@ -31,12 +31,13 @@ const Index = (props) => {
   const { users } = props;
   return (
     <Layout noContainer={<FAQCard />}>
-      <div><Banner/></div>
+        <Banner />
       <ScrollableSection />
-      <Row style={{ marginTop: 110 }}>
+      <Row style={{ marginTop: 100 }}>
         <Col md={4}>
           <CardWithIcon
             icon={StreetView}
+            first
             text=" ﻚﻟ ﺐﺴﻧﺄﻟا ىﻮﺘﺴﻤﻟا ﻦﻣ ﺔﺳارﺪﻟا أﺪﺑا"
             subtext="ﺐﺳﺎﻨﻤﻟا ﺔﻐﻠﻟا ىﻮﺘﺴﻣ دﺪﺤﻳ رﺎﺒﺘﺧا لﺎﻠﺧ ﻦﻣ ﺎﻨﻌﻣ ﺎﻫﺪﻳﺮﺗ ﻲﺘﻟا ﺔﻐﻠﻟا ﻢﻠﻌﺗ ﻰﻓ ﻚﺘﻠﺣر أﺪﺒﺘﺳ"
           />
@@ -44,24 +45,25 @@ const Index = (props) => {
         <Col md={4}>
           <CardWithIcon
             icon={Scheduler}
+            second
             text="ﻚﺗﺎﻴﺣ ﻂﻤﻧ ﻊﻣ ﺐﺳﺎﻨﺘﻳ لوﺪﺟ"
-            subtext="ﺎﻫﺮﻴﻏ وأ ﺔﻴﺳارﺪﻟا وأ ﻪﻴﻨﻬﻤﻟا ﻚﺗﺎﺟﺎﻴﺘﺣا ﺐﺳﺎﻨﺗ ﺔﻔﻠﺘﺨﻣ سورد ﻦﻴﺑ رﺎﻴﺘﺧﺎﻟا ﻚﻨﻜﻤﻴﻓ  ﻚﺗﺎﻴﺣ ﻂﻤﻧ ﺐﺳﺎﻨﺗ هدﺪﻌﺘﻣ ﺔﺳارد تﺎﻗوا ﻚﻟ ﺮﻓﻮﻧ فﻮﺳ  "
+            subtext="ﺎﻫﺮﻴﻏ وأ ﺔﻴﺳارﺪﻟا وأ ﻪﻴﻨﻬﻤﻟا ﻚﺗﺎﺟﺎﻴﺘﺣا ﺐﺳﺎﻨﺗ ﺔﻔﻠﺘﺨﻣ سورد ﻦﻴﺑ رﺎﻴﺘﺧﺎﻟا ﻚﻨﻜﻤﻴﻓ  ﻚﺗﺎﻴﺣ ﻂﻤﻧ ﺐﺳﺎﻨﺗ هدﺪﻌﺘﻣ ﺔﺳارد تﺎﻗوا ﻚﻟ ﺮﻓﻮﻧ فﻮﺳ"
           />
         </Col>
         <Col md={4}>
           <CardWithIcon
             icon={Diploma}
-            text=" ةﺪﻤﺘﻌﻣ تادﺎﻬﺷ "
+            text=" ةﺪﻤﺘﻌﻣ تادﺎﻬﺷ"
             subtext="ةرود ﻞﻛ ﺔﻳﺎﻬﻧ ﺪﻌﺑ ىﻮﺘﺴﻣ لﺎﻤﻜﺘﺳا ةدﺎﻬﺷ ﻰﻠﻋ ﻞﺼﺤﺗ فﻮﺳ"
           />
         </Col>
       </Row>
-      <div
-        className="d-flex flex-column align-items-center"
-        style={{ marginTop: 110, marginBottom: 60 }}
-      >
-        <span style={style.subscriptionheader}>ﺪﻤﺘﻌﻣ ﺪﻬﻌﻣ ﻦﻣ ﺔﻐﻠﻟا ﻢﻠﻌﺗ</span>
-        <span style={style.subheader}>
+      <div className="d-flex flex-column align-items-center"
+        style={{ marginTop: 110, marginBottom: 60 }}>
+        <span style={style.subscriptionheader} className="restext-align-center">
+          ﺪﻤﺘﻌﻣ ﺪﻬﻌﻣ ﻦﻣ ﺔﻐﻠﻟا ﻢﻠﻌﺗ
+        </span>
+        <span style={style.subheader} className="restext-align-center">
           تﺎﻳﻮﺘﺴﻤﻟا ﻊﻴﻤﺠﻟ - ﻚﺗﺎﺟﺎﻴﺘﺣا ﺐﺳﺎﻨﺗ ﺔﺼﺼﺨﺘﻣ ﺔﻐﻟ تارود
         </span>
       </div>
@@ -99,16 +101,17 @@ const Index = (props) => {
           />
         </Col>
       </Row>
-      <div style={style.descHeaader} className="d-flex justify-content-center">
-        <span>ﻢﻠﻌﺗا نا ﺪﻳرا</span>
+      <div
+        style={style.descHeaader}
+        className="d-flex justify-content-center restext-align-center"
+      >
+        <span>ﻦﻳﺎﻠﻧوا ﺔﻐﻠﻟا ﻢﻠﻌﺗ تاﻮﻄﺧ</span>
       </div>
       <div>
         <DescriptionSection
           title="ىﻮﺘﺴﻣ رﺎﺒﺘﺧا .١"
           subtitle="ﺎﻬﻤﻠﻌﺗ ﺪﻳﺮﺗ ﻲﺘﻟا ﺔﻐﻠﻟﺎﺑ كاﻮﺘﺴﻣ دﺪﺤﻳ فﻮﺳ ىﻮﺘﺴﻣ رﺎﺒﺘﺧا"
           directionClass={"d-flex flex-row"}
-          resClassText="res-flex-end"
-          resClassIcon="res-flex-start"
           DescIcon={DescIcon}
           iconStyle={{ width: 366 }}
         />
@@ -116,29 +119,23 @@ const Index = (props) => {
           title="ﺐﺳﺎﻨﻤﻟا ﺖﻗﻮﻟا رﺎﺘﺧا .٢"
           subtitle="ﻚﺒﺳﺎﻨﻳ يﺬﻟا ﺖﻗﻮﻟا ﺮﺘﺧا .مﻮﻴﻟا لاﻮﻃ ﺎﻨﻳﺪﻟ سورﺪﻟا"
           directionClass={"d-flex flex-row-reverse"}
-          resClassText="res-flex-start"
-          resClassIcon="res-flex-end"
           DescIcon={DescIcon1}
         />
         <DescriptionSection
           title="٣. اختار الحصص المناسبه لك"
           subtitle="مدة الحصص ٦٠ دقيقه. اختار الحصص التي تريد التركيز فيها اكثر"
           directionClass={"d-flex flex-row"}
-          resClassText="res-flex-end"
-          resClassIcon="res-flex-start"
           DescIcon={DescIcon2}
         />
         <DescriptionSection
           title="٤. انضم للحصص"
           subtitle="اغلب الحصص لدينا تتكون من ١٠-١٢ طالب من انحاء العالم"
           directionClass={"d-flex flex-row-reverse"}
-          resClassText="res-flex-start"
-          resClassIcon="res-flex-end"
           DescIcon={DescIcon3}
         />
       </div>
       <div
-        className="d-flex justify-content-center"
+        className="d-flex justify-content-center restext-align-center"
         style={{ ...style.descHeaader, marginBottom: 0 }}
       >
         <span>ماذا يقول الطلبه عن الدراسة معنا</span>
@@ -185,6 +182,7 @@ const style = {
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: 14,
+    lineHeight: 2.5,
     color: "#6B6C7F",
   },
   descHeaader: {
