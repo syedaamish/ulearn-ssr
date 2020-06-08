@@ -19,13 +19,13 @@ import { ReviewCard } from "../components/ReviewCard";
 import { FAQCard } from "../components/FAQCard";
 import { Banner } from "../components/Banner";
 
-const User = ({ user }) => (
-  <li>
-    <Link as={`/u/${user.id}`} href={`/user?id=${user.id}`}>
-      <a>{user.name}</a>
-    </Link>
-  </li>
-);
+// const User = ({ user }) => (
+//   <li>
+//     <Link as={`/u/${user.id}`} href={`/user?id=${user.id}`}>
+//       <a>{user.name}</a>
+//     </Link>
+//   </li>
+// );
 
 const Index = (props) => {
   const { users } = props;
